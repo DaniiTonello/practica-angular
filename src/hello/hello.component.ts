@@ -6,4 +6,10 @@ import { Component } from "@angular/core";
     styleUrls: ['./hello.component.css'] //styleUrls puede aceptar varias hojas de estilo a la vez, por eso está dentro de un array
 })
 
-export class HelloComponent{}
+export class HelloComponent{
+    public name:string;
+
+    constructor(){
+        this.name = 'Daniela'; //propiedad declarada en componente
+    }
+}
