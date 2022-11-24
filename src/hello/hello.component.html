@@ -1,10 +1,10 @@
 <div>
-  <input type="text" [value]="inputName" (keyup)="updateInputName($event)" />
+  <input type="text" [(ngModel)]="inputName" />
   <button (click)="addName()">Add name</button>
 </div>
 
 <p (click)="onNameClick()">Hello {{ name }}!</p>
-<!--Los property bindings tienen un flujo de datos unidireccional, 
-    en este caso desde inputName hacia la propiedad value, pero no al reves.
-    Se puede pasar informacion en sentido contrario con event bindings
+<!--binding bidireccional con ngModel, con corchetes y parentesis.
+    ngModel asocia la variable que se le pasa al input en la que esta unicada y hace que las modificaciones afecten de un lado al otro y al reves
+    para usar ngModel se necesita importar el modulo formsModule de angular forms en el modulo principal
 -->

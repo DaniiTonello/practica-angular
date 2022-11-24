@@ -11,7 +11,7 @@ export class HelloComponent{
     @Output() sayHello:EventEmitter<string> = new EventEmitter<string>(); //solo emitira eventos de tipo string
 
     public nameList:Array<string> = [];
-    public inputName:string = 'John';
+    public inputName:string = '';
 
     constructor(){
     }
@@ -26,8 +26,5 @@ export class HelloComponent{
         console.log(this.nameList);
     }
 
-    updateInputName(event:any){
-        this.inputName = event.target.value;
-        console.log(this.inputName);
-    }
+
 }
