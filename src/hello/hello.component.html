@@ -1,2 +1,10 @@
+<div>
+  <input type="text" [value]="inputName" (keyup)="updateInputName($event)" />
+  <button (click)="addName()">Add name</button>
+</div>
+
 <p (click)="onNameClick()">Hello {{ name }}!</p>
-<!--interpolacion: cuando angular detecta una expresion entre 2 pares de llaves cualquiera sea, angular te devuelve el resultado-->
+<!--Los property bindings tienen un flujo de datos unidireccional, 
+    en este caso desde inputName hacia la propiedad value, pero no al reves.
+    Se puede pasar informacion en sentido contrario con event bindings
+-->
