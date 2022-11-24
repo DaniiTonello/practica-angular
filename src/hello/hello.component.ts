@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'custom-hello',
@@ -7,9 +7,8 @@ import { Component } from "@angular/core";
 })
 
 export class HelloComponent{
-    public name:string;
+    @Input() name?:string; //pasa un valor de fuera del componente(anterior) hacia dentro del componente gracias al valor Input para que pueda ser REUTILIZABLE
 
     constructor(){
-        this.name = 'Daniela'; //propiedad declarada en componente
     }
 }
