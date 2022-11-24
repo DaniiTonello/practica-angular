@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //defino nombre en el componente principal para tener una variable para pasarle al componente para no tener un nombre harcodeado
   public myName:string = 'Daniela';
+
+  onSayHello(message:string){
+    console.log(message);
+  }
 }

@@ -1,4 +1,7 @@
 <div style="text-align: center">
   <h1>Let's learn Angular</h1>
-  <custom-hello [name]="myName"></custom-hello>
-</div>
+  <custom-hello [name]="myName" (sayHello)="onSayHello($event)"></custom-hello>
+  <!--se utilizan corchetes para entradas(propiedades) y parentesis para salida(eventos),
+  se utilizan parentesis en la propiedad que emite el evento para decir que es un Event Binding 
+  ($event) hace referencia al evento que está emitiendo onSayHello
+--></div>
